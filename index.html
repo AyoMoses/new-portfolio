@@ -16,20 +16,72 @@
 
     <link rel="stylesheet" href="./pages/homepage/scss/style.css" type="text/css" media="screen">
     <title>Homepage</title>
-    <link rel="shortcut icon" sizes="32x32" type="image/png" href="assets/favicons/favicon-32x32.png"/>
-    <link rel="shortcut icon" sizes="16x16" type="image/png" href="assets/favicons/favicon-16x16.png"/>
-    <link rel="shortcut icon" sizes="192x192" type="image/png" href="assets/favicons/android-chrome-192x192.png"/>
-    <link rel="shortcut icon" sizes="512x512" type="image/png" href="assets/favicons/android-chrome-512x512.png"/>
-    <link rel="shortcut icon" type="image/png" href="assets/favicons/apple-touch-icon.png"/>
-    <link rel="shortcut icon" type="image/ico" href="assets/favicons/favicon.ico"/>
+    <link rel="shortcut icon" sizes="32x32" type="image/png" href="assets/favicons/favicon-32x32.png" />
+    <link rel="shortcut icon" sizes="16x16" type="image/png" href="assets/favicons/favicon-16x16.png" />
+    <link rel="shortcut icon" sizes="192x192" type="image/png" href="assets/favicons/android-chrome-192x192.png" />
+    <link rel="shortcut icon" sizes="512x512" type="image/png" href="assets/favicons/android-chrome-512x512.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicons/apple-touch-icon.png" />
+    <link rel="shortcut icon" type="image/ico" href="assets/favicons/favicon.ico" />
 
 </head>
 
 <body>
     <div class="page-wrapper">
+        <!-- BANNER NAVIGATION -->
         <header class="page-wrapper__nav">
-            I AM THE HEADER OR NAVBAR
+            <div class="navTop-banner">
+                <a href="#">
+                    <img class="navTop-inner-logo" src="assets/icons/logo.svg" alt="Site logo">
+                </a>
+                <button class="menu-toggle nav-button" role="banner" id="nav-button"></button>
+            </div>
+            <nav role="banner">
+                <ul class="menu">
+                    <a href="#">
+                        <img class="navTop-inner-logo" src="assets/icons/logo.svg" alt="Site logo">
+                    </a>
+
+                    <li data-animation="to-left">
+                        <a href="#">
+                            Home
+                            <span class="outer" aria-hidden="true">
+                                <span class="inner">Home</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li data-animation="to-bottom">
+                        <a href="#">
+                            projects
+                            <span class="outer" aria-hidden="true">
+                                <span class="inner">projects</span>
+                            </span>
+                        </a>
+                    </li>
+                    <a href="#">
+                        <li data-animation="to-top">
+                            <a href="#">
+                                clients
+                                <span class="outer" aria-hidden="true">
+                                    <span class="inner">clients</span>
+                                </span>
+                            </a>
+                        </li>
+                    </a>
+                    <li data-animation="to-left">
+                        <a href="#">
+                            contact
+                            <span class="outer" aria-hidden="true">
+                                <span class="inner">contact</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- END OF PRIMARY NAV -->
         </header>
+
+
+
         <div class="page-wrapper__content">
             I AM THE CONTENT
         </div>
@@ -39,6 +91,19 @@
     </div>
 
     <script src="./pages/homepage/index.js"></script>
+
+    <!-- Hamburger menu script -->
+    <script>
+        document.querySelector('#nav-button').addEventListener('click', () => {
+            const isOpen = document.body.classList.contains('open');
+
+            if (isOpen) {
+                document.body.classList.remove('open');
+            } else {
+                document.body.classList.add('open');
+            }
+        });
+    </script>
 
 </body>
 
