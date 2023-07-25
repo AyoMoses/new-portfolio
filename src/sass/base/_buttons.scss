@@ -1,0 +1,105 @@
+/* _buttons.scss */
+
+// Base styles as mixin, then @include into various versions
+@mixin button {
+	cursor: pointer;
+	position: relative;
+	background: $white;
+	min-width: 200px;
+	max-width: 90vw;
+	text-align: center;
+	display: block;
+	font-size: 16px;
+	line-height: 1;
+	font-family: $serif;
+	color: $primary;
+	border: 5px solid $primary;
+	padding: 20px 16px 16px 16px;
+	font-weight: 700;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		width: calc(100% + 9px);
+		height: calc(100% + 9px);
+		border: 2px solid currentColor;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 7px;
+		height: 100%;
+		top: 7px;
+		right: -12px;
+		background: $white;
+	}
+
+	&:hover {
+		background: $lightPink;
+		color: $primary;
+	}
+
+	@include bp-super-small {
+
+		& {
+			font-size: 18px;
+			min-width: 280px;
+		}
+
+	}
+}
+
+.button {
+	@include button;
+
+	&:hover {
+		
+	}
+}
+
+.button-white {
+	@include button;
+
+	background: transparent;
+	color: $white;
+	border: 5px solid $white;
+
+	&::before {
+		border: 2px solid $white;
+	}
+
+	&::after {
+		content: unset;
+	}
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.3);
+		color: $white;
+	}
+}
+
+.serif-link {
+	font-size: 16px;
+	font-weight: 700;
+	font-family: $serif;
+	color: $primary;
+
+	&::after {
+		content: ' >';
+	}
+
+	&:hover {
+		color: #956033;
+	}
+
+	@include bp-super-small {
+
+		& {
+			font-size: 18px;
+		}
+
+	}
+}

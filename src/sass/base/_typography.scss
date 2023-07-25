@@ -1,0 +1,167 @@
+/* _typography.scss */
+
+/* ============ FONTS ============ */
+
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display:700&display=swap');
+
+/* ============ TAGS ============ */
+
+body {
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: $dark;
+    font-family: $body-copy;
+}
+
+.small-heading {
+    font-family: $body-copy;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    @include bp-super-small {
+
+        & {
+            font-size: 16px;
+        }
+
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $serif;
+    font-weight: 400;
+    color: $dark;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 1.2;
+
+    @include bp-sm {
+
+        & {
+            font-size: 38px;
+        }
+
+    }
+
+    @include bp-md {
+
+        & {
+            font-size: 48px;
+        }
+
+    }
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    
+    @include bp-sm {
+
+        & {
+            font-size: 2.5vw;
+        }
+
+    }
+
+    @include bp-md {
+
+        & {
+            font-size: 30px;
+        }
+
+    }
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 1.2;
+
+    @include bp-super-small {
+
+        & {
+            font-size: 32px;
+        }
+
+    }
+}
+
+h4 {
+    
+}
+
+h5 {
+    
+}
+
+h6 {
+    
+}
+
+p {
+    font-family: $body-copy;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+ul, ol {
+    
+
+    li {
+        
+    }
+}
+
+a {
+    font-weight: 700;
+    color: $primary;
+
+    &:hover {
+        color: #956033;
+    }
+}
+
+blockquote {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+
+    &::before,
+    &::after {
+        font-style: italic;
+        display: block;
+        font-size: 90px;
+        height: 55px;
+        position: relative;
+        font-weight: 700;
+        color: $pink;
+    }
+
+    &::before {
+        content: open-quote;
+        left: -45px;
+    }
+
+    &::after {
+        content: close-quote;
+        text-align: right;
+        top: -50px;
+        left: 25px;
+    }
+
+    p {
+        font-style: italic;
+        font-size: 20px;
+    }
+}
