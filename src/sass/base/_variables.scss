@@ -2,51 +2,13 @@
 
 /* ============ Colors ============ */
 
-$primary: #ca9364;
-$pink: #d3abac;
-$lightPink: #efded0;
-$darkPink: #998888;
-$brown: #745b32;
-$white: #ffffff;
-$dark: #2d2d2d;
+$col-brand: #fe5000;
+$col-dark: #111111;
+$col-white: #ffffff;
+$col-light-grey: #f5f0e6;
+$col-dark-grey: #f1ebdd;
+$col-font: #000000;
 
 /* ============ Fonts ============ */
 
-$serif: 'Arima Madurai', cursive;
-$body-copy: 'Arsenal', sans-serif;
-
-/* ============ Breakpoints ============ */
-
-/*
-.example {
-  width: 100%;
-  
-  @include bp-sm {
-    width: 50%;
-  }
-}
-*/
-
-@mixin bp-super-small {
-  @media only screen and (min-width: 480px) {
-    @content;
-  }
-}
-
-@mixin bp-sm {
-  @media only screen and (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin bp-md {
-  @media only screen and (min-width: 1024px) {
-    @content;
-  }
-}
-
-@mixin bp-lg {
-  @media only screen and (min-width: 1440px) {
-    @content;
-  }
-}
+$global-font: 'Poppins', sans-serif;

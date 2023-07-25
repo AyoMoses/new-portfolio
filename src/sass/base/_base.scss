@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
-$global-font: 'Poppins', sans-serif;
-
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -71,4 +68,9 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+img:not([alt]) {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }

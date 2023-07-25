@@ -14,15 +14,17 @@
 
     <meta name="apple-mobile-web-app-status-bar-style" content="#0d0d0f">
 
-    <link rel="stylesheet" href="./pages/homepage/scss/style.css" type="text/css" media="screen">
     <title>Homepage</title>
-    <link rel="shortcut icon" sizes="32x32" type="image/png" href="assets/favicons/favicon-32x32.png" />
-    <link rel="shortcut icon" sizes="16x16" type="image/png" href="assets/favicons/favicon-16x16.png" />
-    <link rel="shortcut icon" sizes="192x192" type="image/png" href="assets/favicons/android-chrome-192x192.png" />
-    <link rel="shortcut icon" sizes="512x512" type="image/png" href="assets/favicons/android-chrome-512x512.png" />
-    <link rel="shortcut icon" type="image/png" href="assets/favicons/apple-touch-icon.png" />
-    <link rel="shortcut icon" type="image/ico" href="assets/favicons/favicon.ico" />
 
+    <link rel="stylesheet" href="../sass/main.css" type="text/css" media="screen">
+    <link rel="shortcut icon" sizes="32x32" type="image/png" href="../assets/favicons/favicon-32x32.png" />
+    <link rel="shortcut icon" sizes="16x16" type="image/png" href="../assets/favicons/favicon-16x16.png" />
+    <link rel="shortcut icon" sizes="192x192" type="image/png" href="../assets/favicons/android-chrome-192x192.png" />
+    <link rel="shortcut icon" sizes="512x512" type="image/png" href="../assets/favicons/android-chrome-512x512.png" />
+    <link rel="shortcut icon" type="image/png" href="../assets/favicons/apple-touch-icon.png" />
+    <link rel="shortcut icon" type="image/ico" href="../assets/favicons/favicon.ico" />
+
+    <script type="module" src="../js/main.js"></script>
 </head>
 
 <body>
@@ -90,18 +92,7 @@
         </footer>
     </div>
 
-    <!-- Hamburger menu script -->
-    <script>
-        document.querySelector('#nav-button').addEventListener('click', () => {
-            const isOpen = document.body.classList.contains('open');
 
-            if (isOpen) {
-                document.body.classList.remove('open');
-            } else {
-                document.body.classList.add('open');
-            }
-        });
-    </script>
 
 </body>
 
