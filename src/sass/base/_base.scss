@@ -1,3 +1,5 @@
+$global-font: 'Poppins', sans-serif;
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -73,4 +75,9 @@ img {
 img:not([alt]) {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
 }

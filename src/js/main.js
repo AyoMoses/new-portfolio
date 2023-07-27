@@ -1,3 +1,6 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
 document.querySelector('#nav-button').addEventListener('click', () => {
   const isOpen = document.body.classList.contains('open');
 
@@ -7,3 +10,7 @@ document.querySelector('#nav-button').addEventListener('click', () => {
     document.body.classList.add('open');
   }
 });
+
+if (module.hot) {
+  module.hot.accept();
+}

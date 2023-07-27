@@ -1,0 +1,28 @@
+{
+  "name": "ayo-portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio for Ayodeji Moses Odukoya",
+  "scripts": {
+    "start": "parcel src/pages/index.html",
+    "build": "parcel build src/pages/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyoMoses/new-portfolio.git"
+  },
+  "author": "ayoMoses",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AyoMoses/new-portfolio/issues"
+  },
+  "homepage": "https://github.com/AyoMoses/new-portfolio#readme",
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "core-js": "^3.31.1",
+    "parcel": "^2.9.3",
+    "regenerator-runtime": "^0.13.11"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
