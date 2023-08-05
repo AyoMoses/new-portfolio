@@ -69,10 +69,6 @@ img:not([alt]) {
   height: 50px;
 }
 
-h1 {
-  color: green;
-}
-
 .menu a {
   color: #fff;
 }
