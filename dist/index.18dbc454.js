@@ -576,12 +576,16 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"1SICI":[function(require,module,exports) {
 var _webImmediateJs = require("core-js/modules/web.immediate.js");
 var _runtime = require("regenerator-runtime/runtime");
+if (module.hot) module.hot.accept();
 document.querySelector("#nav-button").addEventListener("click", ()=>{
     const isOpen = document.body.classList.contains("open");
     if (isOpen) document.body.classList.remove("open");
     else document.body.classList.add("open");
 });
-if (module.hot) module.hot.accept();
+const testJS = function() {
+    console.log("Here we go!");
+};
+testJS();
 
 },{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ"}],"49tUX":[function(require,module,exports) {
 // TODO: Remove this module from `core-js@4` since it's split to modules listed below
