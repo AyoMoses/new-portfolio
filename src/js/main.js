@@ -5,17 +5,25 @@ if (module.hot) {
   module.hot.accept();
 }
 
-document.querySelector('#nav-button').addEventListener('click', () => {
-  const isOpen = document.body.classList.contains('open');
+const handleToggleNav = (el) => {
+  document.querySelector(el).addEventListener('click', () => {
+    const isOpen = document.body.classList.contains('open');
 
-  if (isOpen) {
-    document.body.classList.remove('open');
-  } else {
-    document.body.classList.add('open');
-  }
-});
-
-const testJS = function () {
-  console.log('Here we go!');
+    if (isOpen) {
+      document.body.classList.remove('open');
+    } else {
+      document.body.classList.add('open');
+    }
+  });
 };
-testJS();
+handleToggleNav('.menu-toggle');
+handleToggleNav('.banner__util-close');
+// document.querySelector('#nav-button').addEventListener('click', () => {
+//   const isOpen = document.body.classList.contains('open');
+
+//   if (isOpen) {
+//     document.body.classList.remove('open');
+//   } else {
+//     document.body.classList.add('open');
+//   }
+// });
