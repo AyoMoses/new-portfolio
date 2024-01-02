@@ -18,10 +18,16 @@ ul {
 .navTop-banner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   background-color: $col-dark;
-  padding-left: 150px;
+  padding-inline: 2rem;
+
+  @include bp-sm {
+    padding-left: 150px;
+    padding-right: 0;
+  }
 }
 .navTop-banner img {
   width: 60px;
@@ -33,16 +39,21 @@ ul {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding-top: 0.94rem;
 
-  &-icon {
+  @include bp-sm {
+    padding-top: 2.44rem;
+  }
+
+  &-logo {
     opacity: 0;
     .open & {
       opacity: 1;
-      transition: opacity 0.4s 1s ease-out;
-      -webkit-transition: opacity 0.4s 1s ease-out;
-      -moz-transition: opacity 0.4s 1s ease-out;
-      -ms-transition: opacity 0.4s 1s ease-out;
-      -o-transition: opacity 0.4s 1s ease-out;
+      transition: opacity 0.3s 1s ease-out;
+      -webkit-transition: opacity 0.3s 1s ease-out;
+      -moz-transition: opacity 0.3s 1s ease-out;
+      -ms-transition: opacity 0.3s 1s ease-out;
+      -o-transition: opacity 0.3s 1s ease-out;
     }
   }
   &-button {
@@ -51,20 +62,51 @@ ul {
     border: none;
     background-image: url('../assets/icons/close-menu.svg');
     background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
     cursor: pointer;
+    width: 1.375rem;
+    height: 1.25rem;
+
+    @include bp-sm {
+      width: 1.89275rem;
+      height: 1.76775rem;
+    }
 
     .open & {
       opacity: 1;
-      transform: translate3d(0, 0, 0) rotate(360deg);
-      transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
-      -webkit-transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
-      -moz-transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
-      -ms-transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
-      -o-transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.45s 1s ease-out, opacity 0.3s 1s ease-out;
+      -webkit-transition: transform 0.45s 1s ease-out, opacity 0.3s 1s ease-out;
+      -moz-transition: transform 0.45s 1s ease-out, opacity 0.3s 1s ease-out;
+      -ms-transition: transform 0.45s 1s ease-out, opacity 0.3s 1s ease-out;
+      -o-transition: transform 0.45s 1s ease-out, opacity 0.3s 1s ease-out;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
     }
+  }
 
-    & svg {
-      opacity: 1;
+  &-close {
+    display: grid;
+    place-items: center;
+    padding-right: 2rem;
+
+    @include bp-sm {
+      padding-right: 9.7rem;
+    }
+  }
+
+  &-logo {
+    width: 1.875rem;
+    height: 1.875rem;
+    padding-left: 2rem;
+
+    @include bp-sm {
+      width: 4.125rem;
+      height: 3rem;
+      padding-left: 9.7rem;
     }
   }
 }
@@ -73,13 +115,29 @@ ul {
   background-color: transparent;
   position: fixed;
   z-index: 400;
-  top: 35px;
-  right: 200px;
+  width: 22px;
+  right: 3rem;
+  top: 2.1rem;
+  height: 12px;
   border: none;
   outline: none;
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.3s ease-out;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+
+  @include bp-sm {
+    top: 35px;
+    right: 200px;
+    width: 43px;
+    height: 20px;
+  }
+
   &:before {
     content: url('../assets/icons/hamburger.svg');
+    width: 100%;
+    height: 100%;
   }
 
   &:active {
@@ -98,11 +156,11 @@ ul {
     &:after {
       opacity: 1;
       transform: translate3d(0, 0, 0) rotate(360deg);
-      transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
-      -webkit-transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
-      -moz-transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
-      -ms-transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
-      -o-transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
+      transition: transform 0.3s 1s ease-out, opacity 0.3s 1s ease-out;
+      -webkit-transition: transform 0.3s 1s ease-out, opacity 0.3s 1s ease-out;
+      -moz-transition: transform 0.3s 1s ease-out, opacity 0.3s 1s ease-out;
+      -ms-transition: transform 0.3s 1s ease-out, opacity 0.3s 1s ease-out;
+      -o-transition: transform 0.3s 1s ease-out, opacity 0.3s 1s ease-out;
     }
   }
 }
@@ -137,6 +195,7 @@ nav {
     top: 0;
     &:before {
       animation: menu-animation 0.8s ease-out forwards;
+      -webkit-animation: menu-animation 0.8s ease-out forwards;
     }
   }
 }
@@ -146,11 +205,14 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
   backface-visibility: hidden;
   perspective: 1000;
-  width: 100dvw;
-  height: 100dvh;
-
+  width: 100vw;
+  height: 100vh;
   a {
     opacity: 0;
     text-align: center;
@@ -162,12 +224,16 @@ nav {
     text-transform: capitalize;
     position: relative;
     display: inline-block;
-    font-weight: bold;
-    font-size: 60px;
-    line-height: 90px;
+    font-size: 2.5rem;
+    font-weight: 700;
     overflow: hidden;
     color: $col-dark;
     -webkit-text-stroke: 1px $col-white;
+
+    @include bp-sm {
+      font-size: 3.75rem;
+      line-height: normal;
+    }
 
     .open & {
       opacity: 1;
@@ -200,6 +266,17 @@ nav {
     -moz-transform: translateX(100%);
     -ms-transform: translateX(100%);
     -o-transform: translateX(100%);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6.69rem;
+    @include bp-sm {
+      margin-top: 4.25rem;
+    }
   }
 }
 .menu a .outer,

@@ -95,11 +95,19 @@ ul li {
 
 .navTop-banner {
   background-color: #111;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
-  padding-left: 150px;
+  padding-inline: 2rem;
   display: flex;
+}
+
+@media only screen and (width >= 768px) {
+  .navTop-banner {
+    padding-left: 150px;
+    padding-right: 0;
+  }
 }
 
 .navTop-banner img {
@@ -111,17 +119,24 @@ ul li {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-top: .94rem;
   display: flex;
 }
 
-.banner__util-icon {
+@media only screen and (width >= 768px) {
+  .banner__util {
+    padding-top: 2.44rem;
+  }
+}
+
+.banner__util-logo {
   opacity: 0;
 }
 
-.open .banner__util-icon {
+.open .banner__util-logo {
   opacity: 1;
-  -o-transition: opacity .4s 1s ease-out;
-  transition: opacity .4s ease-out 1s;
+  -o-transition: opacity .3s 1s ease-out;
+  transition: opacity .3s ease-out 1s;
 }
 
 .banner__util-button {
@@ -129,34 +144,81 @@ ul li {
   cursor: pointer;
   background-color: #0000;
   background-image: url("close-menu.30e51c51.svg");
+  background-position: 0;
   background-repeat: no-repeat;
+  background-size: contain;
   border: none;
+  width: 1.375rem;
+  height: 1.25rem;
+}
+
+@media only screen and (width >= 768px) {
+  .banner__util-button {
+    width: 1.89275rem;
+    height: 1.76775rem;
+  }
 }
 
 .open .banner__util-button {
   opacity: 1;
-  -o-transition: transform .4s 1s ease-out, opacity .4s 1s ease-out;
-  transition: transform .4s ease-out 1s, opacity .4s ease-out 1s;
-  transform: translate3d(0, 0, 0)rotate(360deg);
+  -o-transition: transform .45s 1s ease-out, opacity .3s 1s ease-out;
+  transition: transform .45s ease-out 1s, opacity .3s ease-out 1s;
+  transform: translate3d(0, 0, 0);
 }
 
-.banner__util-button svg {
-  opacity: 1;
+.banner__util-close {
+  place-items: center;
+  padding-right: 2rem;
+  display: grid;
+}
+
+@media only screen and (width >= 768px) {
+  .banner__util-close {
+    padding-right: 9.7rem;
+  }
+}
+
+.banner__util-logo {
+  width: 1.875rem;
+  height: 1.875rem;
+  padding-left: 2rem;
+}
+
+@media only screen and (width >= 768px) {
+  .banner__util-logo {
+    width: 4.125rem;
+    height: 3rem;
+    padding-left: 9.7rem;
+  }
 }
 
 .nav-button {
   z-index: 400;
+  -o-transition: opacity .3s ease-out;
   background-color: #0000;
   border: none;
   outline: none;
-  transition: opacity .2s ease-out;
+  width: 22px;
+  height: 12px;
+  transition: opacity .3s ease-out;
   position: fixed;
-  top: 35px;
-  right: 200px;
+  top: 2.1rem;
+  right: 3rem;
+}
+
+@media only screen and (width >= 768px) {
+  .nav-button {
+    width: 43px;
+    height: 20px;
+    top: 35px;
+    right: 200px;
+  }
 }
 
 .nav-button:before {
   content: url("hamburger.657a2189.svg");
+  width: 100%;
+  height: 100%;
 }
 
 .nav-button:active {
@@ -179,8 +241,8 @@ ul li {
 
 .open .nav-button:after {
   opacity: 1;
-  -o-transition: transform .4s 1s ease-out, opacity .4s 1s ease-out;
-  transition: transform .4s ease-out 1s, opacity .4s ease-out 1s;
+  -o-transition: transform .3s 1s ease-out, opacity .3s 1s ease-out;
+  transition: transform .3s ease-out 1s, opacity .3s ease-out 1s;
   transform: translate3d(0, 0, 0)rotate(360deg);
 }
 
@@ -226,8 +288,8 @@ nav:before {
 .menu {
   backface-visibility: hidden;
   perspective: 1000px;
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -240,13 +302,19 @@ nav:before {
   text-transform: capitalize;
   color: #111;
   -webkit-text-stroke: 1px #fff;
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 90px;
+  font-size: 2.5rem;
+  font-weight: 700;
   display: inline-block;
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 36px, 0);
+}
+
+@media only screen and (width >= 768px) {
+  .menu a {
+    font-size: 3.75rem;
+    line-height: normal;
+  }
 }
 
 .open .menu a {
@@ -291,6 +359,20 @@ nav:before {
 .menu .inner {
   display: inline-block;
   transform: translateX(100%);
+}
+
+.menu__container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6.69rem;
+  display: flex;
+}
+
+@media only screen and (width >= 768px) {
+  .menu__container {
+    margin-top: 4.25rem;
+  }
 }
 
 .menu a .outer, .menu a .inner {
